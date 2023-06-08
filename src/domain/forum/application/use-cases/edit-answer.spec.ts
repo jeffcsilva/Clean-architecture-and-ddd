@@ -20,7 +20,8 @@ describe('Edit Answer', () => {
       },
       new UniqueEntityID('answer-1'),
     )
-    inMemoryAnswerRepository.create(newAnswer)
+
+    await inMemoryAnswerRepository.create(newAnswer)
 
     await sut.execute({
       authorId: 'author-1',
@@ -41,7 +42,8 @@ describe('Edit Answer', () => {
       },
       new UniqueEntityID('answer-1'),
     )
-    inMemoryAnswerRepository.create(newAnswer)
+
+    await inMemoryAnswerRepository.create(newAnswer)
 
     await expect(
       sut.execute({
